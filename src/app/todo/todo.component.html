@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6">
+    <ol class="list-group">
+      <li class="list-group-item" *ngFor="let todo of todos">
+        {{todo.name}}:  {{todo.content}}
+      </li>
+    </ol>
+  </div>
+  <div class="col-md-6">
+    name: <input type="text" class="form-control" ([ngModel])="todo.name">
+    content: <input type="text" class="form-control" ([ngModel])="todo.content">
+    <button class="btn btn-primary" >Add ToDo</button>
+  </div>
+</div>
+<!-- [disabled]="!todo.name.trim().length || !todo.content.trim().length"-->
